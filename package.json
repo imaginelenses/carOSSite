@@ -1,0 +1,24 @@
+{
+  "name": "carossite",
+  "version": "1.0.0",
+  "description": "Website for CarOS",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "DEVELOPMENT=true eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imaginelenses/carOSSite.git"
+  },
+  "author": "imaginelenses <imaginelenses@gmail.com> (https://www.imaginelenses.com/)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/imaginelenses/carOSSite/issues"
+  },
+  "homepage": "https://github.com/imaginelenses/carOSSite#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.0.0",
+    "sass": "^1.60.0"
+  }
+}
