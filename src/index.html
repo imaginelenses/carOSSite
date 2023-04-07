@@ -1,6 +1,79 @@
 ---
 layout: 'base.html'
 title: 'Home'
+imgSrc: './src/assets/' 
 ---
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSBcCiDol9v9JK9yqPP_CaqGZP0WIVKvcccBE2vrnXiGZyTVIS_2INixXCektiW8DRfSpUaNQiI_19P/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<div id="featurePhone" class="fullScreen dark">
+  <span>
+    <strong>Cars</strong> are now at the early stage of <strong>smartphones</strong>.
+  </span>
+  {% image imgSrc, "featurePhones.png", "", "100vw", "", false, false %}
+  <span>
+    Each company builds their own <strong>proprietary software</strong>.
+  </span>
+</div>
+
+<div id="tesla" class="fullScreen">
+  <span>
+    <strong>Software defined vehicles</strong> need software defined companies. Most car companies don’t work this way.
+  </span>
+  {% image imgSrc, "teslaInterior.jpg", "", "100vw", "", false, false %}
+  <span>
+    <strong>Tesla</strong> is built from the ground-up to be a software company and has the best-in-class software.
+  </span>
+</div>
+
+<div id="problems" class="fullScreen dark list">
+  
+  <div class="titleWrapper">
+    <h2>Problems</h2>
+  
+    <span>
+      <strong>Bad User Interface & lack of options</strong> leads users to default to <em>Android Auto</em> & <em>Apple CarPlay</em>. However their favorite maps application does not know the car’s range and their favorite voice assistant cannot set the car's temperature.
+    </span>
+  </div>
+
+  <span>
+    <strong>Long Time-to-Market</strong> as software is not designed to be reused & is not shared between models.
+  </span>
+
+  <span>
+    <strong>Chip shortages</strong> will disrupt production as each car has thousands of chips, each running its own software.
+  </span>
+</div>
+
+<div id="solutions" class="fullScreen light list">
+  
+  <div class="titleWrapper">
+    <h2>Solution</h2>
+  
+    <span>
+      A <strong>Revolutionary UI</strong> designed for cars.
+    </span>
+  </div>
+
+  <span>
+    An <strong>Operating System</strong> that runs everything from <strong>telemetry</strong>, <strong>ADAS</strong> to <strong>infotainment</strong>. Providing a cohesive user experience and using significantly fewer chips. 
+  </span>
+
+  <span>
+    An <strong>App Store</strong> for third-party developers to build apps for cars. Developers will have access to <strong>data</strong> like range and <strong>non-crucial controls</strong> like temperature.
+  </span>
+</div>
+
+
+<div id="android" class="fullScreen dark">
+  <span>
+    If Tesla's software is the iOS running on their car, the iPhone
+  </span>
+
+  <div class="images">
+    {% image imgSrc, "teslaScreen.jpg", "teslaScreen", "50vw" %}
+    {% image imgSrc, "iphone.png", "", "50vw" %}
+  </div>
+
+  <span>
+    We will be the Android running on every other car.
+  </span>
+</div>
