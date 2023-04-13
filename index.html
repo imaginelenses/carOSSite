@@ -6,28 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarOS - Home</title>
 
-  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
 
   
-  <style>body{display:flex;flex-direction:column;height:100vh;height:100svh;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";color:#fff}header{display:flex;width:100%;padding-block:1%;padding-inline:3%;box-sizing:border-box;flex-direction:row;justify-content:space-between;align-items:center;background-color:#000}header #caros{font-size:30px;font-family:monospace;font-weight:400;letter-spacing:-1px}header a,header a:visited,header a:hover{color:#fff;text-decoration:none}header nav{font-size:18px}header nav a:hover{text-decoration:underline}main{flex:1}.dark{background-color:#0f0f0f}.light{background-color:#141414}.fullScreen{display:flex;min-height:55vw;width:100%;padding-block:5%;box-sizing:border-box;flex-direction:column;align-items:center}.fullScreen h2{text-decoration:underline;font-weight:400}.fullScreen h2,.fullScreen span{font-size:calc(1.3vw + 1rem)}#featurePhone{justify-content:center}#featurePhone span,#featurePhone img{width:70vw;height:auto;box-sizing:border-box}#featurePhone span{padding-inline:3.1%}#featurePhone img{margin-block:20px}#tesla{position:relative;padding-top:7%;justify-content:space-between;overflow:hidden}#tesla div,#tesla span{width:70vw;text-align:center}#tesla img{width:100vw;height:auto;position:absolute;top:0;left:0;z-index:-1}.list{justify-content:space-evenly}.list h2,.list span,.list .titleWrapper{width:70vw}.list span,.list .titleWrapper{margin-bottom:2%}#android{justify-content:space-between}#android .images{display:flex;width:100%;flex-direction:row;align-items:center;justify-content:space-evenly;flex-wrap:nowrap}#android .images img{height:100%;max-height:30vw;width:auto}footer{box-sizing:border-box;background-color:#b22222;padding-block:3%;text-align:center}footer a,footer a:visited,footer a:hover{color:#fff;text-decoration:none}footer a:hover{text-decoration:underline}</style>
+  <style>body{margin:0;font-size:62.5%;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";color:#fafafa;background-color:#0a0a0a}header{display:flex;width:100%;padding-inline:3rem;padding-block:1rem;box-sizing:border-box;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;background-color:#050505}header a{color:#8c8c8c}header a[aria-current=page]{color:#fafafa}header a,footer a{display:block;text-decoration:none}header a:hover,footer a:hover{text-decoration:underline;text-underline-offset:.1rem;text-decoration-thickness:1px}header a:visited,footer a:visited{text-decoration:none}.logo{font-size:2.2rem;color:#fafafa;font-style:italic;font-weight:500;letter-spacing:.3rem}.navigationToggle{display:none;width:2.5rem;aspect-ratio:1;border:0;padding:0;background-image:url("/icons/menu.svg");background-color:rgba(0,0,0,0);background-repeat:no-repeat}.navigationToggle span[aria-hidden=true]{display:none}.navigationToggle[aria-expanded=true]{background-image:url("/icons/close.svg")}.navigation{display:flex;gap:1rem;margin:0;font-size:1.3rem;list-style:none}@media(max-width: 30em){header{padding-inline:1.2rem}.navigationToggle{display:block}nav{width:100%;max-height:0;transition:max-height 700ms ease-in-out;overflow:hidden}nav[data-visible=true]{max-height:500px}.navigation{padding-block:1rem;flex-direction:column}.navigation a{text-align:end}}main{font-size:1rem}img{height:auto;max-width:100%}footer{display:flex;width:100%;height:5rem;justify-content:center;align-items:center;font-size:1.2rem;background-color:#050505}footer a{color:#fafafa}</style>
   
+  <style>section{display:flex;min-height:50vw;padding-block:5rem;flex-direction:column;align-items:center;font-size:2.3rem;background-image:radial-gradient(circle, rgba(88, 88, 88, 0.5) 0.08rem, transparent 0.08rem);background-size:3.5rem 3.5rem}section span{width:min(1300px,95%);padding-inline:1rem;text-align:center}section:nth-child(even){background-color:#050505}section:nth-child(odd){background-color:#0a0a0a}#featurePhone{box-sizing:border-box;justify-content:center}#featurePhone img{margin-bottom:1rem}#tesla{position:relative;justify-content:space-around;gap:1rem;isolation:isolate}#tesla img{-webkit-mask-image:linear-gradient(transparent, black);mask-image:linear-gradient(transparent, black)}@media(min-width: 30em){#tesla{background-color:#0a0a0a}#tesla img{position:absolute;inset:0;height:100%;width:auto;object-fit:cover;z-index:-1}}#problems,#solution{justify-content:center;gap:4rem}.sectionTitle{margin-block:0;text-align:center;letter-spacing:.5rem}.sectionList{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3rem}#android{justify-content:center;gap:2.5rem}#android #imagesWrapper{display:flex;padding-inline:1rem;justify-content:center;align-items:center;gap:5%}#android #imagesWrapper .teslaScreen{border-radius:4%}#lookBack{justify-content:space-around;gap:1rem}#lookBack #videosWrapper{display:flex;width:90%;flex-direction:row;justify-content:space-evenly;align-items:center;gap:5%}#lookBack #videosWrapper lite-youtube{display:flex;flex:1;width:100%;aspect-ratio:4/3}@media(max-width: 30em){#tesla{background-color:#050505}#android #imagesWrapper{flex-wrap:wrap}#android #imagesWrapper .iphone{max-height:40vh;width:auto}#lookBack #videosWrapper{flex-direction:column}#lookBack #videosWrapper lite-youtube:nth-child(2){margin-top:5%}}@media(prefers-reduced-motion: no-preference){#tesla .hidden{opacity:0;transition:opacity 1.5s ease-in}#tesla .show{opacity:1}#problems .hidden,#solution .hidden{opacity:0;filter:blur(1px);transform:translateX(-8%);transition:opacity 1s ease-out,filter 1s ease-out,transform 800ms ease-out}#problems .show,#solution .show{opacity:1;filter:blur(0);transform:translateX(0)}#problems .show:nth-child(2),#solution .show:nth-child(2){transition-delay:110ms}#problems .show:nth-child(3),#solution .show:nth-child(3){transition-delay:220ms}#android .teslaScreen{transform:translateX(-10%)}#android .iphone{transform:translateX(-50%);transition-delay:200ms}#lookBack lite-youtube{transform:translateX(-25%)}#lookBack lite-youtube:nth-child(2){transition-delay:200ms}#android .hidden,#lookBack .hidden{opacity:0;filter:blur(1px);transition:opacity 1s ease-out,filter 1s ease-out,transform 800ms ease-out}#android .show,#lookBack .show{opacity:1;filter:blur(0);transform:translateX(0)}}</style>
+  
+
+  <script src="/js/index.js" differ></script>
 
 </head>
 <body>
   <header>
-    <a href="/">
+    <a class="logo" href="/">
       <span id="caros">CarOS</span>
     </a>
     
-    <nav>
-      <a href="https://imaginelenses.com">Imaginelenses</a>
+    <button class="navigationToggle" aria-controls="#primaryNavigation" aria-expanded="false">
+      <span aria-hidden="true">Menu</span>
+    </button>
+    
+    <nav id="primaryNavigation" data-visible="false">
+      <ul class="navigation">
+        <li>
+          <a aria-current="page" href="/">Home</a>
+        </li>
+        <li>
+          <a href="https://imaginelenses.com">Imaginelenses</a>
+        </li>
+      </ul>
+
     </nav>
   </header>
 
   <main>
     
       
-<div id="featurePhone" class="fullScreen dark">
+<section id="featurePhone">
   <span>
     <strong>Cars</strong> are now at the early stage of <strong>smartphones</strong>.
   </span>
@@ -35,76 +51,79 @@
   <span>
     Each company builds their own <strong>proprietary software</strong>.
   </span>
-</div>
+</section>
 
-<div id="tesla" class="fullScreen">
+<section id="tesla">
   <span>
     <strong>Software defined vehicles</strong> need software defined companies. Most car companies don’t work this way.
   </span>
-  <picture><source type="image/webp" srcset="/media/teslaInterior-1000w.webp 1000w, /media/teslaInterior-1500w.webp 1500w, /media/teslaInterior-2000w.webp 2000w" sizes="100vw"><source type="image/jpeg" srcset="/media/teslaInterior-1000w.jpeg 1000w, /media/teslaInterior-1500w.jpeg 1500w, /media/teslaInterior-2000w.jpeg 2000w" sizes="100vw"><img src="/media/teslaInterior-1000w.jpeg" width="2000" height="1125" alt="teslaInterior" class="" data-index="" ></picture>
+  <picture><source type="image/webp" srcset="/media/teslaInterior-1000w.webp 1000w, /media/teslaInterior-1500w.webp 1500w, /media/teslaInterior-2000w.webp 2000w" sizes="100vw"><source type="image/jpeg" srcset="/media/teslaInterior-1000w.jpeg 1000w, /media/teslaInterior-1500w.jpeg 1500w, /media/teslaInterior-2000w.jpeg 2000w" sizes="100vw"><img src="/media/teslaInterior-1000w.jpeg" width="2000" height="1125" alt="teslaInterior" class="hidden" data-index="" ></picture>
   <span>
     <strong>Tesla</strong> is built from the ground-up to be a software company and has the best-in-class software.
   </span>
-</div>
+</section>
 
-<div id="problems" class="fullScreen dark list">
-  
-  <div class="titleWrapper">
-    <h2>Problems</h2>
-  
-    <span>
+<section id="problems">
+  <h2 class="sectionTitle">Problems</h2>
+  <div class="sectionList">
+    <span class="hidden">
       <strong>Bad User Interface & lack of options</strong> leads users to default to <em>Android Auto</em> & <em>Apple CarPlay</em>. However their favorite maps application does not know the car’s range and their favorite voice assistant cannot set the car's temperature.
     </span>
-  </div>
-
-  <span>
-    <strong>Long Time-to-Market</strong> as software is not designed to be reused & is not shared between models.
-  </span>
-
-  <span>
-    <strong>Chip shortages</strong> will disrupt production as each car has thousands of chips, each running its own software.
-  </span>
-</div>
-
-<div id="solutions" class="fullScreen light list">
-  
-  <div class="titleWrapper">
-    <h2>Solution</h2>
-  
-    <span>
-      A <strong>Revolutionary UI</strong> designed for cars.
+    <span class="hidden">
+      <strong>Long Time-to-Market</strong> as software is not designed to be reused & is not shared between models.
+    </span>
+    <span class="hidden">
+      <strong>Chip shortages</strong> will disrupt production as each car has thousands of chips, each running its own software.
     </span>
   </div>
+</section>
 
-  <span>
-    An <strong>Operating System</strong> that runs everything from <strong>telemetry</strong>, <strong>ADAS</strong> to <strong>infotainment</strong>. Providing a cohesive user experience and using significantly fewer chips. 
-  </span>
+<section id="solution">
+  <h2 class="sectionTitle">Solution</h2>
+  <div class="sectionList">
+    <span class="hidden">
+      A <strong>Revolutionary UI</strong> designed for cars.
+    </span>
+    <span class="hidden">
+      An <strong>Operating System</strong> that runs everything from <strong>telemetry</strong>, <strong>ADAS</strong> to <strong>infotainment</strong>. Providing a cohesive user experience and using significantly fewer chips. 
+    </span>
+    <span class="hidden">
+      An <strong>App Store</strong> for third-party developers to build apps for cars. Developers will have access to <strong>data</strong> like range and <strong>non-crucial controls</strong> like temperature.
+    </span>
+  </div>
+</section>
 
-  <span>
-    An <strong>App Store</strong> for third-party developers to build apps for cars. Developers will have access to <strong>data</strong> like range and <strong>non-crucial controls</strong> like temperature.
-  </span>
-</div>
-
-
-<div id="android" class="fullScreen dark">
+<section id="android">
   <span>
     If Tesla's software is the iOS running on their car, the iPhone
   </span>
-
-  <div class="images">
-    <picture><source type="image/webp" srcset="/media/teslaScreen-989w.webp 989w" sizes="50vw"><source type="image/jpeg" srcset="/media/teslaScreen-989w.jpeg 989w" sizes="50vw"><img src="/media/teslaScreen-989w.jpeg" width="989" height="664" alt="teslaScreen" class="teslaScreen" data-index="" loading="lazy" decoding="async"></picture>
-    <picture><source type="image/webp" srcset="/media/iphone-272w.webp 272w" sizes="50vw"><source type="image/jpeg" srcset="/media/iphone-272w.jpeg 272w" sizes="50vw"><img src="/media/iphone-272w.jpeg" width="272" height="512" alt="iphone" class="" data-index="" loading="lazy" decoding="async"></picture>
+  <div id="imagesWrapper">
+    <picture><source type="image/webp" srcset="/media/teslaScreen-989w.webp 989w" sizes="50vw"><source type="image/jpeg" srcset="/media/teslaScreen-989w.jpeg 989w" sizes="50vw"><img src="/media/teslaScreen-989w.jpeg" width="989" height="664" alt="teslaScreen" class="hidden teslaScreen" data-index="" loading="lazy" decoding="async"></picture>
+    <picture><source type="image/webp" srcset="/media/iphone-272w.webp 272w" sizes="50vw"><source type="image/jpeg" srcset="/media/iphone-272w.jpeg 272w" sizes="50vw"><img src="/media/iphone-272w.jpeg" width="272" height="512" alt="iphone" class="hidden iphone" data-index="" loading="lazy" decoding="async"></picture>
   </div>
-
   <span>
     We will be the Android running on every other car.
   </span>
-</div>
+</section>
+
+<section id="lookBack">
+
+  <h2 class="sectionTitle">Android 2007</h2>
+
+  <div id="videosWrapper">
+    <lite-youtube videoid="6rYozIZOgDk" style="background-image: url('https://i.ytimg.com/vi/6rYozIZOgDk/maxresdefault.jpg'); max-width: unset !important;" class="hidden"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play Video: Introducing Android</span></button></lite-youtube>
+    <lite-youtube videoid="1FJHYqE0RDg" style="background-image: url('https://i.ytimg.com/vi/1FJHYqE0RDg/hqdefault.jpg'); max-width: unset !important;" class="hidden"><button type="button" class="lty-playbtn"><span class="lyt-visually-hidden">Play Video: Android Demo</span></button></lite-youtube>
+  </div>
+
+</section>
+
+<link rel="stylesheet" href="/css/lite-yt-embed.css">
+<script async defer src="/js/lite-yt-embed.js"></script>
     
   </main>
 
   <footer>
-    &#169; 2023 <a href="https://imaginelenses.com">Imaginelenses</a> 
+    &#169; 2023 &nbsp; <a href="https://imaginelenses.com">Imaginelenses</a> 
   </footer>
   
 </body>
