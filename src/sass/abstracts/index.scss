@@ -1,0 +1,35 @@
+$font-family-sans-serif:
+  // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Windows
+  "Segoe UI",
+  // Android
+  Roboto,
+  // Basic web fallback
+  "Helvetica Neue", Arial,
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+
+$textColor: rgb(250, 250, 250);
+$gray: rgb(10, 10, 10);
+$darkgray: rgb(5, 5, 5);
+
+// Nav
+$navBackground: $darkgray;
+$navTextColorMuted: rgb(140, 140, 140);
+
+// Footer
+$footerBackground: $darkgray;
+
+// Background pattern
+$circleColor: rgba(88, 88, 88, 0.5);
+$circleSize: 0.08rem;
+$backgroundSize: 3.5rem;

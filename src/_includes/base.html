@@ -6,23 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarOS{% if title %}{{ [" - ", title] | join }}{% endif %}</title>
 
-  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
 
   {# Styles #}
-  {% sass "./src/sass/main.scss" %}
+  {% sass "./src/sass/base.scss" %}
   {% for link in css %}
   {% sass ["./src/sass/", link] | join %}
   {% endfor %}
 
+  <script src="/js/index.js" differ></script>
+
 </head>
 <body>
   <header>
-    <a href="/">
+    <a class="logo" href="/">
       <span id="caros">CarOS</span>
     </a>
     
-    <nav>
-      <a href="https://imaginelenses.com">Imaginelenses</a>
+    <button class="navigationToggle" aria-controls="#primaryNavigation" aria-expanded="false">
+      <span aria-hidden="true">Menu</span>
+    </button>
+    
+    <nav id="primaryNavigation" data-visible="false">
+      <ul class="navigation">
+        <li>
+          <a aria-current="page" href="/">Home</a>
+        </li>
+        <li>
+          <a href="https://imaginelenses.com">Imaginelenses</a>
+        </li>
+      </ul>
+
     </nav>
   </header>
 
@@ -33,7 +47,7 @@
   </main>
 
   <footer>
-    &#169; {% year %} <a href="https://imaginelenses.com">Imaginelenses</a> 
+    &#169; {% year %} &nbsp; <a href="https://imaginelenses.com">Imaginelenses</a> 
   </footer>
   
 </body>

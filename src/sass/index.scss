@@ -1,0 +1,227 @@
+@use 'abstracts/index.scss' as *;
+
+section {
+  display: flex;
+  min-height: 50vw;
+  padding-block: 5rem;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.3rem;
+
+  background-image: 
+    radial-gradient(
+      circle,
+      $circleColor $circleSize,
+      transparent $circleSize
+    );
+  background-size: $backgroundSize $backgroundSize;
+
+  span {
+    width: min(1300px, 95%);
+    padding-inline: 1rem;
+    text-align: center;
+  }
+}
+
+section:nth-child(even) {
+  background-color: $darkgray;
+}
+
+section:nth-child(odd) {
+  background-color: $gray;
+}
+
+#featurePhone {
+  box-sizing: border-box;
+  justify-content: center;
+
+  img {
+    margin-bottom: 1rem;
+  }
+}
+
+#tesla {
+  position: relative;
+  justify-content: space-around;
+  gap: 1rem;
+  isolation: isolate;
+  
+  img {
+    $mask: linear-gradient(transparent, black);
+    -webkit-mask-image: $mask;
+    mask-image: $mask;
+  }
+}
+
+@media (min-width: 30em) {
+  #tesla {
+    background-color: $gray;
+
+    img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
+
+#problems, #solution {
+  justify-content: center;
+  gap: 4rem;
+}
+
+.sectionTitle {
+  margin-block: 0;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+.sectionList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+#android {
+  justify-content: center;
+  gap: 2.5rem;
+
+  #imagesWrapper {
+    display: flex;
+    padding-inline: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    
+    .teslaScreen {
+      border-radius: 4%;
+    }
+  }
+}
+
+#lookBack {
+  justify-content: space-around;
+  gap: 1rem;
+
+  #videosWrapper {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5%;
+
+    lite-youtube {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  #tesla {
+    background-color: $darkgray;
+  }
+  
+  #android #imagesWrapper {
+    flex-wrap: wrap;
+    
+    .iphone {
+      max-height: 40vh;
+      width: auto;
+    }
+  }
+
+  #lookBack #videosWrapper {
+    flex-direction: column;
+
+    lite-youtube:nth-child(2) {
+      margin-top: 5%;
+    }
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  #tesla {
+    .hidden {
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+    }
+
+    .show {
+      opacity: 1;
+    }
+  }
+
+  #problems, #solution {
+    .hidden {
+      opacity: 0;
+      filter: blur(1px);
+      transform: translateX(-8%);
+      transition: 
+        opacity 1s ease-out,
+        filter 1s ease-out,
+        transform 800ms ease-out;
+    }
+    
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+
+    $delay: 110ms;
+    .show:nth-child(2) {
+      transition-delay: $delay;
+    }
+    .show:nth-child(3) {
+      transition-delay: calc($delay * 2);
+    }
+  }
+  
+  #android {
+    .teslaScreen {
+      transform: translateX(-10%);
+    }
+    
+    .iphone {
+      transform: translateX(-50%);
+      transition-delay: 200ms;
+    }
+  }
+
+  #lookBack {
+    lite-youtube {
+      transform: translateX(-25%);
+    }
+
+    lite-youtube:nth-child(2) {
+      transition-delay: 200ms;
+    }
+  }
+
+  #android, #lookBack {
+    .hidden {
+      opacity: 0;
+      filter: blur(1px);
+      transition: 
+        opacity 1s ease-out,
+        filter 1s ease-out,
+        transform 800ms ease-out;
+    }
+    
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+  }
+}

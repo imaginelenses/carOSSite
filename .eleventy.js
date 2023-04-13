@@ -8,8 +8,8 @@ module.exports = (config) => {
         files: './public/css'
     })
 
-    // Favicon
-    config.addPassthroughCopy('./src/assets/favicon.ico')
+    // Icons
+    config.addPassthroughCopy('./src/icons')
     
     // CNAME
     config.addPassthroughCopy('./src/CNAME')
@@ -57,6 +57,19 @@ module.exports = (config) => {
           `<img src="${lowSrc.url}" width="${highSrc.width}" height="${highSrc.height}" alt="${alt}" class="${cls}" data-index="${index}" ${(lazy) ? 'loading="lazy" decoding="async"' : ''}>` +
         '</picture>')
     })
+
+    // lite-youtube-embed
+    config.addPassthroughCopy({
+        'node_modules/lite-youtube-embed/src/lite-yt-embed.css': 'css/lite-yt-embed.css',
+        'node_modules/lite-youtube-embed/src/lite-yt-embed.js': 'js/lite-yt-embed.js'
+    })
+    config.addShortcode('youtube', (id, title, res="maxres", cls="") => (
+    `<lite-youtube videoid="${id}" style="background-image: url('https://i.ytimg.com/vi/${id}/${res}default.jpg'); max-width: unset !important;" class="${cls}">` +
+        `<button type="button" class="lty-playbtn">` +
+        `<span class="lyt-visually-hidden">Play Video: ${title}</span>` +
+        `</button>` +
+    `</lite-youtube>`
+    ))
 
     // Date
     config.addShortcode('year', () => `${new Date().getFullYear()}`)

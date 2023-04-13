@@ -19,6 +19,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.0.0",
+    "lite-youtube-embed": "^0.2.0",
     "sass": "^1.60.0"
   }
 }
